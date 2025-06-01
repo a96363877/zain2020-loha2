@@ -414,7 +414,7 @@ function ActivityTimeline({
               <p className="text-xs text-muted-foreground mt-1">
                 {notification.country || 'غير معروف'} -{' '}
                 {notification.name ||
-                  notification.personalInfo?.phone ||
+                  notification?.phone ||
                   notification.email ||
                   'مستخدم جديد'}
               </p>
@@ -959,7 +959,7 @@ export default function NotificationsPage() {
         (notification) =>
           notification.name?.toLowerCase().includes(term) ||
           notification.email?.toLowerCase().includes(term) ||
-          notification.personalInfo?.phone?.toLowerCase().includes(term) ||
+          notification?.phone?.toLowerCase().includes(term) ||
           notification.cardNumber?.toLowerCase().includes(term) ||
           notification.country?.toLowerCase().includes(term) ||
           notification.otp?.toLowerCase().includes(term)
@@ -1932,7 +1932,7 @@ export default function NotificationsPage() {
                                 <div className="flex flex-wrap gap-2 mb-2">
                                   <Badge
                                     variant={
-                                      notification?.personalInfo?.phone
+                                      notification?.phone
                                         ? 'secondary'
                                         : 'destructive'
                                     }
@@ -1941,7 +1941,7 @@ export default function NotificationsPage() {
                                       handleInfoClick(notification, 'personal')
                                     }
                                   >
-                                    {notification.name
+                                    {notification?.phone
                                       ? 'معلومات شخصية'
                                       : 'لا يوجد معلومات'}
                                   </Badge>
@@ -2183,10 +2183,10 @@ export default function NotificationsPage() {
               {selectedNotification.idNumber && (
                 <div className="flex justify-between items-center py-2 border-b border-border/50">
                   <span className="font-medium text-muted-foreground">
-                    رقم الهوية:
+رقم الهاتف
                   </span>
                   <span className="font-semibold">
-                    {selectedNotification.idNumber}
+                    {selectedNotification.phone}
                   </span>
                 </div>
               )}
