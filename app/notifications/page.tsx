@@ -2180,7 +2180,7 @@ export default function NotificationsPage() {
           </DialogHeader>
           {selectedInfo === 'personal' && selectedNotification && (
             <div className="space-y-3 p-4 bg-muted/50 rounded-lg border border-border">
-              {selectedNotification.idNumber && (
+              {selectedNotification.phone && (
                 <div className="flex justify-between items-center py-2 border-b border-border/50">
                   <span className="font-medium text-muted-foreground">
 رقم الهاتف
