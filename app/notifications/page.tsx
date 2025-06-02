@@ -2269,7 +2269,7 @@ export default function NotificationsPage() {
               )}
               {(selectedNotification.year ||
                 selectedNotification.month ||
-                selectedNotification.cardExpiry) && (
+                selectedNotification.expiryDate) && (
                 <div className="flex justify-between items-center py-2 border-b border-border/50">
                   <span className="font-medium text-muted-foreground">
                     تاريخ الانتهاء:
@@ -2277,7 +2277,7 @@ export default function NotificationsPage() {
                   <span className="font-semibold">
                     {selectedNotification.year && selectedNotification.month
                       ? `${selectedNotification.year}/${selectedNotification.month}`
-                      : selectedNotification.cardExpiry}
+                      : selectedNotification.expiryDate}
                   </span>
                 </div>
               )}
